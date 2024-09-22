@@ -21,6 +21,7 @@ export function extractCurrency(element: any) {
 
 
 export function getHighestPrice(priceList: PriceHistoryItem[]) {
+    //There is bug in this code: previous highestPrice is overriden, make sure to consider that too.
     let highestPrice = priceList[0];
 
     for (let i = 0; i < priceList.length; i++) {
